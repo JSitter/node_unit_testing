@@ -9,8 +9,6 @@ it('Should create a new item with name and price', ()=>{
     item = c.createItem("Popsicle", "1.50")
     expect(item.name).to.equal("Popsicle")
     expect(item.price).to.equal("1.50")
-
-
 }); // 1  //shopping cart object with name and price properties
 
 it('Should add a new item to the shopping cart', ()=>{
@@ -21,7 +19,12 @@ it('Should add a new item to the shopping cart', ()=>{
 });  // shopping cart array
 
 it('Should return the number of items in the cart', ()=>{
-    const results = cart.addItem()
+    c = new Cart()
+    c.addItem("pop", "1.50")
+    c.addItem("nuts", ".89")
+    c.addItem("nuts", ".89")
+    expect(c.numItems).to.equal(3)
+    
 }); // 
 it('Should return an array containing all items in cart');
 it('Should remove items from cart');
