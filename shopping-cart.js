@@ -11,4 +11,8 @@ module.exports = class Cart{
         this._cart.push({name, price})
     }
 
+    numItems(){
+        return this._cart.length
+    }
+
 }

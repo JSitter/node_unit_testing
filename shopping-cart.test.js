@@ -23,7 +23,7 @@ it('Should return the number of items in the cart', ()=>{
     c.addItem("pop", "1.50")
     c.addItem("nuts", ".89")
     c.addItem("nuts", ".89")
-    expect(c.numItems).to.equal(3)
+    expect(c.numItems()).to.equal(3)
     
 }); // 
 it('Should return an array containing all items in cart');
