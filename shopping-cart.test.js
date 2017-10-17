@@ -8,7 +8,7 @@ it('Should create a new item with name and price', ()=>{
     c = new Cart();
     item = c.createItem("Popsicle", "1.50")
     expect(item.name).to.equal("Popsicle")
-    expect(item.price).to.equal("1.5")
+    expect(item.price).to.equal("1.50")
 
 
 }); // 1  //shopping cart object with name and price properties
