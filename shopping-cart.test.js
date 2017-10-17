@@ -15,7 +15,9 @@ it('Should add a new item to the shopping cart', ()=>{
     expect(results.length).to.be(1)
 });  // shopping cart array
 
-it('Should return the number of items in the cart'); // 
+it('Should return the number of items in the cart', ()=>{
+    const results = cart.addItem()
+}); // 
 it('Should return an array containing all items in cart');
 it('Should remove items from cart');
 // Stretch challenges
