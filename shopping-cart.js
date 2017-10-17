@@ -1,4 +1,7 @@
+
 module.exports = class Cart{
+    
+
     constructor(){
         this._cart = []
     }
@@ -26,5 +29,13 @@ module.exports = class Cart{
                 return 0
             }
         }        
+    }
+
+    getCartAmt(){
+        let amt = 0
+        for(let i = 0; i<this._cart.length; i++){
+            amt += parseFloat(this._cart[i].price)
+        }
+        return amt
     }
 }

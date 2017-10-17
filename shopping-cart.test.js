@@ -4,6 +4,7 @@ const Cart = require('./shopping-cart.js');
 const expect = chai.expect;
 
 
+
 it('Should create a new item with name and price', ()=>{
     c = new Cart();
     item = c.createItem("Popsicle", "1.50")
@@ -37,9 +38,16 @@ it('Should remove items from cart', ()=>{
     expect(c.numItems()).to.equal(2)
 });
 // Stretch challenges
-it('Should update the count of items in the cart');
+it('Should update the count of items in the cart', ()=>{
+    c = makeCart()
+    c.addItem("cotton candy", "2.25")
+    expect(c.numItems()).to.equal(4)
+});
 it('Should remove an item when its count is 0');
-it('Should return the total cost of all items in the cart');
+it('Should return the total cost of all items in the cart', ()=>{
+    c = makeCart()
+    expect(c.getCartAmt()).to.equal(1.5+.89+.89)
+});
 
 
 makeCart = ()=>{
