@@ -5,20 +5,19 @@ const expect = chai.expect;
 
 
 it('Should create a new item with name and price', ()=>{
-    
     c = new Cart();
-    c.addItem(("Popsicle", "1.20"))
-    console.log(c._cart[0].item)
-    expect(c._cart[0].name).to.equal('Popsicle')
-    expect(c._cart[0].price).to.equal('1.20')
+    item = c.createItem("Popsicle", "1.50")
+    expect(item.name).to.equal("Popsicle")
+    expect(item.price).to.equal("1.5")
+
 
 }); // 1  //shopping cart object with name and price properties
 
 it('Should add a new item to the shopping cart', ()=>{
-    const c = cart()
-    c.addItem(cart.createItem("Dog Bed", "32.95"))
-    console.log("results length:", c.cart.length())
-    expect(c.cart.length()).to.be(1)
+    c = new Cart();
+    c.addItem("Popsicle", "1.20")
+    expect(c._cart[0].name).to.equal('Popsicle')
+    expect(c._cart[0].price).to.equal('1.20')
 });  // shopping cart array
 
 it('Should return the number of items in the cart', ()=>{
