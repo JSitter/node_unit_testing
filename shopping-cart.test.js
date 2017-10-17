@@ -28,11 +28,14 @@ it('Should return the number of items in the cart', ()=>{
 }); // 
 it('Should return an array containing all items in cart', ()=>{
     c = makeCart()
-
-    
+    expect(c.getCart().length).to.equal(3)
 });
 
-it('Should remove items from cart');
+it('Should remove items from cart', ()=>{
+    c = makeCart()
+    c.removeItem("nuts")
+    expect(c.numItems).to.equal(2)
+});
 // Stretch challenges
 it('Should update the count of items in the cart');
 it('Should remove an item when its count is 0');
