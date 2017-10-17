@@ -15,4 +15,7 @@ module.exports = class Cart{
         return this._cart.length
     }
 
+    getCart(){
+        return this._cart
+    }
 }
